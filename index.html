@@ -20,7 +20,7 @@
         </p>
     </section>
     <section>
-        <form>
+        <form id="scoreForm">
             <table>
                 <thead>
                     <tr>
@@ -34,167 +34,167 @@
                         <td>
                             <label>
                                 Smart lamp 1 is
-                                <select>
+                                <select class="input" id="npc1">
                                     <option value="0">not</option>
                                     <option value="5">partly</option>
                                     <option value="15">completely</option>
                                 </select>
                                 in area 1 or 2 of the correct room and is
-                                <select>
+                                <select class="input" id="s1">
                                     <option value="0">not standing</option>
                                     <option value="5">standing</option>
                                 </select>
                                 .
                             </label>
                         </td>
-                        <td></td>
+                        <td id="result-1"></td>
                         <td>25</td>
                     </tr>
                     <tr>
                         <td>
                             <label>
                                 Smart lamp 2 is
-                                <select>
+                                <select class="input" id="npc2">
                                     <option value="0">not</option>
                                     <option value="5">partly</option>
                                     <option value="15">completely</option>
                                 </select>
                                 in area 1 or 2 of the correct room and is
-                                <select>
+                                <select class="input" id="s2">
                                     <option value="0">not standing</option>
                                     <option value="5">standing</option>
                                 </select>
                                 .
                             </label>
                         </td>
-                        <td></td>
+                        <td id="result-2"></td>
                         <td>25</td>
                     </tr>
                     <tr>
                         <td>
                             <label>
                                 Smart lamp 3 is
-                                <select>
+                                <select class="input" id="npc3">
                                     <option value="0">not</option>
                                     <option value="5">partly</option>
                                     <option value="15">completely</option>
                                 </select>
                                 in area 1 or 2 of the correct room and is
-                                <select>
+                                <select class="input" id="s3">
                                     <option value="0">not standing</option>
                                     <option value="5">standing</option>
                                 </select>
                                 .
                             </label>
                         </td>
-                        <td></td>
+                        <td id="result-3"></td>
                         <td>25</td>
                     </tr>
                     <tr>
                         <td>
                             <label>
                                 Smart lamp 4 is
-                                <select>
+                                <select class="input" id="npc4">
                                     <option value="0">not</option>
                                     <option value="5">partly</option>
                                     <option value="15">completely</option>
                                 </select>
                                 in area 1 or 2 of the correct room and is
-                                <select>
+                                <select class="input" id="s4">
                                     <option value="0">not standing</option>
                                     <option value="5">standing</option>
                                 </select>
                                 .
                             </label>
                         </td>
-                        <td></td>
+                        <td id="result-4"></td>
                         <td>25</td>
                     </tr>
                     <tr>
                         <td>
                             <label>
                                 Smart lamp 5 is
-                                <select>
+                                <select class="input" id="npc5">
                                     <option value="0">not</option>
                                     <option value="5">partly</option>
                                     <option value="15">completely</option>
                                 </select>
                                 in area 1 or 2 of the correct room and is
-                                <select>
+                                <select class="input" id="s5">
                                     <option value="0">not standing</option>
                                     <option value="5">standing</option>
                                 </select>
                                 .
                             </label>
                         </td>
-                        <td></td>
+                        <td id="result-5"></td>
                         <td>25</td>
                     </tr>
                     <tr>
                         <td>
                             <label>
                                 Smart lamp 6 is
-                                <select>
+                                <select class="input" id="npc6">
                                     <option value="0">not</option>
                                     <option value="5">partly</option>
                                     <option value="15">completely</option>
                                 </select>
                                 in area 1 or 2 of the correct room and is
-                                <select>
+                                <select class="input" id="s6">
                                     <option value="0">not standing</option>
                                     <option value="5">standing</option>
                                 </select>
                                 .
                             </label>
                         </td>
-                        <td></td>
+                        <td id="result-6"></td>
                         <td>25</td>
                     </tr>
                     <tr>
                         <td>
                             <label>
                                 Old lamp 1 is
-                                <select>
+                                <select class="input" id="npc-b1">
                                     <option value="0">not</option>
                                     <option value="5">partly</option>
                                     <option value="15">completely</option>
                                 </select>
                                 in the trash area and is
-                                <select>
+                                <select class="input" id="s-b1">
                                     <option value="0">not standing</option>
                                     <option value="5">standing</option>
                                 </select>
                                 .
                             </label>
                         </td>
-                        <td></td>
+                        <td id="result-b1"></td>
                         <td>20</td>
                     </tr>
                     <tr>
                         <td>
                             <label>
                                 Old lamp 2 is
-                                <select>
+                                <select class="input" id="npc-b2">
                                     <option value="0">not</option>
                                     <option value="5">partly</option>
                                     <option value="15">completely</option>
                                 </select>
                                 in the trash area and is
-                                <select>
+                                <select class="input" id="s-b2">
                                     <option value="0">not standing</option>
                                     <option value="5">standing</option>
                                 </select>
                                 .
                             </label>
                         </td>
-                        <td></td>
+                        <td id="result-b2"></td>
                         <td>20</td>
                     </tr>
                     <tr>
                         <td>
                             <label>
                                 The robot has moved or damaged
-                                <select>
+                                <select class="input" id="walls">
                                     <option value="0">0</option>
                                     <option value="-15">1</option>
                                     <option value="-30">2</option>
@@ -203,22 +203,22 @@
                                 walls.
                             </label>
                         </td>
-                        <td></td>
+                        <td id="result-walls"></td>
                         <td>0</td>
                     </tr>
                     <tr>
                         <td>
                             <label>
                                 The robot
-                                <select>
+                                <select class="input" id="end">
                                     <option value="0">has not</option>
                                     <option value="10">has</option>
                                 </select>
                                 ended completely inside the start/finish area.
                             </label>
                         </td>
-                        <td></td>
-                        <td>0</td>
+                        <td id="result-end"></td>
+                        <td>10</td>
                     </tr>
                 </tbody>
                 <tfoot>
@@ -230,7 +230,7 @@
                 </tfoot>
             </table>
             <br>
-            <input type="reset" value="Reset">
+            <input id="resetButton" type="reset" value="Reset" on>
         </form>
     </section>
     <footer>
