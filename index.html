@@ -21,11 +21,217 @@
     </section>
     <section>
         <form>
-            <!-- TODO: add questions -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mission</th>
+                        <th>Your score</th>
+                        <th>Highest possible score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label>
+                                Smart lamp 1 is
+                                <select>
+                                    <option value="0">not</option>
+                                    <option value="5">partly</option>
+                                    <option value="15">completely</option>
+                                </select>
+                                in area 1 or 2 of the correct room and is
+                                <select>
+                                    <option value="0">not standing</option>
+                                    <option value="5">standing</option>
+                                </select>
+                                .
+                            </label>
+                        </td>
+                        <td></td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Smart lamp 2 is
+                                <select>
+                                    <option value="0">not</option>
+                                    <option value="5">partly</option>
+                                    <option value="15">completely</option>
+                                </select>
+                                in area 1 or 2 of the correct room and is
+                                <select>
+                                    <option value="0">not standing</option>
+                                    <option value="5">standing</option>
+                                </select>
+                                .
+                            </label>
+                        </td>
+                        <td></td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Smart lamp 3 is
+                                <select>
+                                    <option value="0">not</option>
+                                    <option value="5">partly</option>
+                                    <option value="15">completely</option>
+                                </select>
+                                in area 1 or 2 of the correct room and is
+                                <select>
+                                    <option value="0">not standing</option>
+                                    <option value="5">standing</option>
+                                </select>
+                                .
+                            </label>
+                        </td>
+                        <td></td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Smart lamp 4 is
+                                <select>
+                                    <option value="0">not</option>
+                                    <option value="5">partly</option>
+                                    <option value="15">completely</option>
+                                </select>
+                                in area 1 or 2 of the correct room and is
+                                <select>
+                                    <option value="0">not standing</option>
+                                    <option value="5">standing</option>
+                                </select>
+                                .
+                            </label>
+                        </td>
+                        <td></td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Smart lamp 5 is
+                                <select>
+                                    <option value="0">not</option>
+                                    <option value="5">partly</option>
+                                    <option value="15">completely</option>
+                                </select>
+                                in area 1 or 2 of the correct room and is
+                                <select>
+                                    <option value="0">not standing</option>
+                                    <option value="5">standing</option>
+                                </select>
+                                .
+                            </label>
+                        </td>
+                        <td></td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Smart lamp 6 is
+                                <select>
+                                    <option value="0">not</option>
+                                    <option value="5">partly</option>
+                                    <option value="15">completely</option>
+                                </select>
+                                in area 1 or 2 of the correct room and is
+                                <select>
+                                    <option value="0">not standing</option>
+                                    <option value="5">standing</option>
+                                </select>
+                                .
+                            </label>
+                        </td>
+                        <td></td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Old lamp 1 is
+                                <select>
+                                    <option value="0">not</option>
+                                    <option value="5">partly</option>
+                                    <option value="15">completely</option>
+                                </select>
+                                in the trash area and is
+                                <select>
+                                    <option value="0">not standing</option>
+                                    <option value="5">standing</option>
+                                </select>
+                                .
+                            </label>
+                        </td>
+                        <td></td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Old lamp 2 is
+                                <select>
+                                    <option value="0">not</option>
+                                    <option value="5">partly</option>
+                                    <option value="15">completely</option>
+                                </select>
+                                in the trash area and is
+                                <select>
+                                    <option value="0">not standing</option>
+                                    <option value="5">standing</option>
+                                </select>
+                                .
+                            </label>
+                        </td>
+                        <td></td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                The robot has moved or damaged
+                                <select>
+                                    <option value="0">0</option>
+                                    <option value="-15">1</option>
+                                    <option value="-30">2</option>
+                                    <option value="-45">3</option>
+                                </select>
+                                walls.
+                            </label>
+                        </td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                The robot
+                                <select>
+                                    <option value="0">has not</option>
+                                    <option value="10">has</option>
+                                </select>
+                                ended completely inside the start/finish area.
+                            </label>
+                        </td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total</td>
+                        <td id="result"></td>
+                        <td>200</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <br>
+            <input type="reset" value="Reset">
         </form>
-        <div id="container">
-            <p>This is your score: <span id="result"></span></p>
-        </div>
     </section>
     <footer>
         <p>Copyright &copy; 2019 Mart Koster. Licenced under the MIT Licence.</p>
