@@ -1,7 +1,7 @@
 let score = 0
 
 const update = function () {
-  let questions = document.getElementsByClassName('question')
+  let inputs = document.getElementsByClassName('input')
 
   // TODO: add up all values
 
