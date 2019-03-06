@@ -53,7 +53,7 @@ footer {
     width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, p, label, td, th {
+h1, h2, h3, h4, h5, h6, p, label, td, th, input {
     font-family: "Roboto Slab", serif;
 }
 
@@ -117,4 +117,13 @@ tr:nth-child(even) {
 tfoot td {
     background-color: #f69c50;
     color: #FFFFFF;
+}
+
+input[type=button] {
+    background-color: #f69c50;
+    border: none;
+    color: #ffffff;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    cursor: pointer;
 }
