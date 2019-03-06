@@ -73,6 +73,9 @@ const update = function () {
   scores[8] = Number(document.getElementById('walls').value)
   total += scores[8]
 
+  // Score can't be negative
+  total = Math.max(total, 0)
+
   // Update table
   document.getElementById('result-1').innerHTML = String(scores[0])
   document.getElementById('result-2').innerHTML = String(scores[1])
