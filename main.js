@@ -99,4 +99,9 @@ function load() {
   update()
 }
 
+function resetForm() {
+  document.getElementById('scoreForm').reset()
+  setTimeout(update)
+}
+
 document.addEventListener('DOMContentLoaded', load, false)
