@@ -25,7 +25,7 @@ body {
     margin-right: auto;
 }
 header, footer {
-    background-color: black;
+    background-color: #ed5542;
     color: #FFFFFF;
     text-align: center;
     padding-top: 1rem;
@@ -97,7 +97,7 @@ table {
 }
 
 th {
-    background-color: black;
+    background-color: #f69c50;
     padding: 0.5em;
     color: #FFFFFF;
 }
@@ -107,14 +107,14 @@ td {
 }
 
 tr:nth-child(odd) {
-    background-color: #bababa;
+    background-color: #c9c9c9;
 }
 
 tr:nth-child(even) {
-    background-color: #9f9f9f;
+    background-color: #b6b6b6;
 }
 
 tfoot td {
-    background-color: black;
+    background-color: #f69c50;
     color: #FFFFFF;
 }
