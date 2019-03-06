@@ -1,6 +1,8 @@
 let scores = [0,0,0,0,0,0,0,0,0,0]
 
 const update = function () {
+  scores = [0,0,0,0,0,0,0,0,0,0]
+  // Smart lamps
   scores[0] = Number(document.getElementById('npc1').value)
   if (scores[0] !== 0) {
     scores[0] += Number(document.getElementById('s1').value)
@@ -49,6 +51,29 @@ const update = function () {
     }
   }
 
+  // Old lamps
+  scores[6] = Number(document.getElementById('npc-b1').value)
+  if (scores[6] !== 0) {
+    scores[6] += Number(document.getElementById('s-b1').value)
+  }
+
+  scores[7] = Number(document.getElementById('npc-b2').value)
+  if (scores[7] !== 0) {
+    scores[7] += Number(document.getElementById('s-b2').value)
+  }
+
+  // End position of robot
+  let total = scores.reduce((partial_sum, a) => partial_sum + a)
+  if (total > 0) {
+    scores[9] = Number(document.getElementById('end').value)
+    total += scores[9]
+  }
+
+  // Walls
+  scores[8] = Number(document.getElementById('walls').value)
+  total += scores[8]
+
+  // Update table
   document.getElementById('result-1').innerHTML = String(scores[0])
   document.getElementById('result-2').innerHTML = String(scores[1])
   document.getElementById('result-3').innerHTML = String(scores[2])
@@ -59,7 +84,7 @@ const update = function () {
   document.getElementById('result-b2').innerHTML = String(scores[7])
   document.getElementById('result-walls').innerHTML = String(scores[8])
   document.getElementById('result-end').innerHTML = String(scores[9])
-  document.getElementById('result').innerHTML = scores.reduce((partial_sum, a) => partial_sum + a)
+  document.getElementById('result').innerHTML = String(total)
 }
 
 function load() {
