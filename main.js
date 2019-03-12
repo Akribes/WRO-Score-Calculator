@@ -93,7 +93,7 @@ function load() {
   let inputs = document.getElementsByClassName('input')
 
   for (let i = 0; i < inputs.length; i++) {
-    inputs[i].addEventListener('input', update, false)
+    inputs[i].addEventListener('change', update, false)
   }
 
   document.getElementById('scoreForm').addEventListener('reset', update, false)
