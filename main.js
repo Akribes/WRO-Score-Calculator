@@ -64,7 +64,6 @@ const update = function () {
 
   // Walls
   scores[8] = Number(document.getElementById('walls').value)
-  total += scores[8]
   
   // End position of robot
   let total = scores.reduce((partial_sum, a) => partial_sum + a)
