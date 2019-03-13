@@ -5,7 +5,6 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="css/main.css">
     <title>WRO Score Calculator</title>
-    <script src="2019/junior.js"></script>
 </head>
 <body>
 <div class="container">
@@ -18,6 +17,9 @@
         <p>
             This tool lets you calculate your score for the WRO. This is the score form season 2019 for the Junior age group of the Regular Category.
             I plan to add a score form for the Elementary age group as well, and maybe even the Senior age group.
+        </p>
+        <p>
+            To get started, select your age group below.
         </p>
         <p>
             If you have any questions or problems, please add an issue to
@@ -34,210 +36,11 @@
         </section>
     </noscript>
     <section>
-        <form id="scoreForm">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Mission</th>
-                        <th>Your score</th>
-                        <th>Highest possible score</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <label>
-                                Smart lamp 1 is
-                                <select class="input" id="npc1">
-                                    <option value="0">not</option>
-                                    <option value="5">partly</option>
-                                    <option value="15">completely</option>
-                                </select></label><label>
-                                in area 1 or 2 of the correct room and is
-                                <select class="input" id="s1">
-                                    <option value="0">not standing</option>
-                                    <option value="5">standing</option>
-                                </select>.
-                            </label>
-                        </td>
-                        <td id="result-1"></td>
-                        <td>25</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label>
-                                Smart lamp 2 is
-                                <select class="input" id="npc2">
-                                    <option value="0">not</option>
-                                    <option value="5">partly</option>
-                                    <option value="15">completely</option>
-                                </select></label><label>
-                                in area 1 or 2 of the correct room and is
-                                <select class="input" id="s2">
-                                    <option value="0">not standing</option>
-                                    <option value="5">standing</option>
-                                </select>.
-                            </label>
-                        </td>
-                        <td id="result-2"></td>
-                        <td>25</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label>
-                                Smart lamp 3 is
-                                <select class="input" id="npc3">
-                                    <option value="0">not</option>
-                                    <option value="5">partly</option>
-                                    <option value="15">completely</option>
-                                </select></label><label>
-                                in area 1 or 2 of the correct room and is
-                                <select class="input" id="s3">
-                                    <option value="0">not standing</option>
-                                    <option value="5">standing</option>
-                                </select>.
-                            </label>
-                        </td>
-                        <td id="result-3"></td>
-                        <td>25</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label>
-                                Smart lamp 4 is
-                                <select class="input" id="npc4">
-                                    <option value="0">not</option>
-                                    <option value="5">partly</option>
-                                    <option value="15">completely</option>
-                                </select></label><label>
-                                in area 1 or 2 of the correct room and is
-                                <select class="input" id="s4">
-                                    <option value="0">not standing</option>
-                                    <option value="5">standing</option>
-                                </select>.
-                            </label>
-                        </td>
-                        <td id="result-4"></td>
-                        <td>25</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label>
-                                Smart lamp 5 is
-                                <select class="input" id="npc5">
-                                    <option value="0">not</option>
-                                    <option value="5">partly</option>
-                                    <option value="15">completely</option>
-                                </select></label><label>
-                                in area 1 or 2 of the correct room and is
-                                <select class="input" id="s5">
-                                    <option value="0">not standing</option>
-                                    <option value="5">standing</option>
-                                </select>.
-                            </label>
-                        </td>
-                        <td id="result-5"></td>
-                        <td>25</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label>
-                                Smart lamp 6 is
-                                <select class="input" id="npc6">
-                                    <option value="0">not</option>
-                                    <option value="5">partly</option>
-                                    <option value="15">completely</option>
-                                </select></label><label>
-                                in area 1 or 2 of the correct room and is
-                                <select class="input" id="s6">
-                                    <option value="0">not standing</option>
-                                    <option value="5">standing</option>
-                                </select>.
-                            </label>
-                        </td>
-                        <td id="result-6"></td>
-                        <td>25</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label>
-                                Old lamp 1 is
-                                <select class="input" id="npc-b1">
-                                    <option value="0">not</option>
-                                    <option value="5">partly</option>
-                                    <option value="15">completely</option>
-                                </select></label><label>
-                                in the trash area and is
-                                <select class="input" id="s-b1">
-                                    <option value="0">not standing</option>
-                                    <option value="5">standing</option>
-                                </select>.
-                            </label>
-                        </td>
-                        <td id="result-b1"></td>
-                        <td>20</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label>
-                                Old lamp 2 is
-                                <select class="input" id="npc-b2">
-                                    <option value="0">not</option>
-                                    <option value="5">partly</option>
-                                    <option value="15">completely</option>
-                                </select></label><label>
-                                in the trash area and is
-                                <select class="input" id="s-b2">
-                                    <option value="0">not standing</option>
-                                    <option value="5">standing</option>
-                                </select>.
-                            </label>
-                        </td>
-                        <td id="result-b2"></td>
-                        <td>20</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label>
-                                The robot has moved or damaged
-                                <select class="input" id="walls">
-                                    <option value="0">0</option>
-                                    <option value="-15">1</option>
-                                    <option value="-30">2</option>
-                                    <option value="-45">3</option>
-                                </select>
-                                walls.
-                            </label>
-                        </td>
-                        <td id="result-walls"></td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label>
-                                The robot
-                                <select class="input" id="end">
-                                    <option value="0">has not</option>
-                                    <option value="10">has</option>
-                                </select>
-                                ended completely inside the start/finish area.
-                            </label>
-                        </td>
-                        <td id="result-end"></td>
-                        <td>10</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td>Total</td>
-                        <td id="result"></td>
-                        <td>200</td>
-                    </tr>
-                </tfoot>
-            </table>
-            <br>
-            <input id="resetButton" type="button" value="Reset" onclick="resetForm()">
-        </form>
+        <h3 class="year">2019</h3>
+        <br />
+        <a class="menu-button disabled" href="#">Elementary</a>
+        <a class="menu-button" href="2019/junior.html">Junior</a>
+        <a class="menu-button disabled" href="#">Senior</a>
     </section>
     <footer>
         <p>Copyright &copy; 2019 Mart Koster. <a href="https://github.com/The947thTokay/WRO-Score-Calculator/blob/master/LICENSE" target="_blank"> Licenced under the MIT Licence.</a></p>
