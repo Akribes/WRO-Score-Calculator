@@ -143,3 +143,40 @@ input[type=button] {
 input[type=button]:hover {
     background-color: #ed5542;
 }
+
+.menu-button {
+    display: inline-block;
+    margin: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    width: 33%;
+    font-size: 1.5em;
+    background-color: #f69c50;
+    cursor: pointer;
+    -webkit-transition: ease-in-out 0.3s;
+    -moz-transition: ease-in-out 0.3s;
+    -o-transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.3s;
+}
+
+.year {
+    text-align: center;
+}
+
+a.menu-button {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu-button:hover {
+    background-color: #ed5542;
+}
+
+.disabled {
+    background-color: #6d6d6d;
+}
+
+.disabled:hover {
+    background-color: #6d6d6d;
+}
