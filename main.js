@@ -1,3 +1,4 @@
+'use strict'
 let scores = [0,0,0,0,0,0,0,0,0,0]
 
 function update () {
