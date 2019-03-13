@@ -1,6 +1,6 @@
 let scores = [0,0,0,0,0,0,0,0,0,0]
 
-const update = function () {
+function update () {
   scores = [0,0,0,0,0,0,0,0,0,0]
   // Smart lamps
   scores[0] = Number(document.getElementById('npc1').value)
