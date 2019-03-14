@@ -15,7 +15,7 @@ body {
     background-color: #b8b8b8;
     line-height: normal;
     position: relative;
-    padding-bottom: 5.5em;
+    padding-bottom: 5.5rem;
     min-height: 100%;
 }
 .container {
@@ -51,29 +51,29 @@ footer {
     right: 0;
     left: 0;
     width: 100%;
+    height: 3.5rem;
 }
-
 h1, h2, h3, h4, h5, h6, p, a, label, td, th, input {
     font-family: "Roboto Slab", serif;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2rem;
 }
 h2 {
-    font-size: 1.8em;
+    font-size: 1.8rem;
 }
 h3 {
-    font-size: 1.6em;
+    font-size: 1.6rem;
 }
 h4 {
-    font-size: 1.4em;
+    font-size: 1.4rem;
 }
 h5 {
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 h6 {
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 
 a {
@@ -91,13 +91,7 @@ a:hover, a:visited {
 }
 
 #github img {
-    height: 45px;
-}
-
-@media only screen and (max-width: 600px) {
-    #github {
-        display: none;
-    }
+    height: 3rem;
 }
 
 table {
@@ -106,12 +100,12 @@ table {
 
 th {
     background-color: #f69c50;
-    padding: 0.5em;
+    padding: 0.5rem;
     color: #FFFFFF;
 }
 
 td {
-    padding: 0.5em;
+    padding: 0.5rem;
 }
 
 tr:nth-child(odd) {
@@ -131,8 +125,8 @@ input[type=button] {
     background-color: #f69c50;
     border: none;
     color: #ffffff;
-    font-size: 1em;
-    padding: 0.5em 1em;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
     -webkit-transition: ease-in-out 0.3s;
     -moz-transition: ease-in-out 0.3s;
@@ -147,11 +141,11 @@ input[type=button]:hover {
 .menu-button {
     display: inline-block;
     margin: auto;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     text-align: center;
     flex: 33%;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     background-color: #f69c50;
     cursor: pointer;
     -webkit-transition: ease-in-out 0.3s;
@@ -188,6 +182,28 @@ a.menu-button {
 }
 
 #lang-container {
-    float: left;
+    left: 1rem;
     position: absolute;
+}
+@media only screen and (max-width: 768px) {
+    body {
+        padding-bottom: 10.5rem;
+    }
+    footer {
+        height: 8.5rem;
+        overflow-y: scroll;
+    }
+    footer p {
+        padding: 0.5rem;
+    }
+    #lang-container {
+        left: 0;
+        float: none;
+        clear: both;
+        position: relative;
+    }
+    #github {
+        position: relative;
+        clear: both;
+    }
 }
