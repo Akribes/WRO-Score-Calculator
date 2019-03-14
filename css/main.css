@@ -150,7 +150,7 @@ input[type=button]:hover {
     padding-top: 1em;
     padding-bottom: 1em;
     text-align: center;
-    width: 33%;
+    flex: 33%;
     font-size: 1.5em;
     background-color: #f69c50;
     cursor: pointer;
@@ -162,6 +162,12 @@ input[type=button]:hover {
 
 .year {
     text-align: center;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 a.menu-button {
@@ -179,4 +185,9 @@ a.menu-button {
 
 .disabled:hover {
     background-color: #6d6d6d;
+}
+
+#lang-container {
+    float: left;
+    position: absolute;
 }

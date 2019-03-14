@@ -5,7 +5,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="../../css/main.css">
     <title>WRO Score Calculator</title>
-    <script src="../../js/junior.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/2019/junior.js"></script>
 </head>
 <body>
 <div class="container">
@@ -238,6 +239,14 @@
         </form>
     </section>
     <footer>
+        <div id="lang-container">
+            <label>
+                <select id="lang" onchange="updateLang()" autocomplete="off">
+                    <option value="">English</option>
+                    <option value="nl" selected>Nederlands</option>
+                </select>
+            </label>
+        </div>
         <p>Copyright &copy; 2019 Mart Koster. <a href="https://github.com/The947thTokay/WRO-Score-Calculator/blob/master/LICENSE" target="_blank"> Gelicenceerd onder de MIT Licence.</a></p>
         <a id="github" href="https://github.com/The947thTokay/WRO-Score-Calculator/" target="_blank"><img src="../../assets/GitHub-Mark-Light-64px.png" alt="GitHub"></a>
     </footer>
