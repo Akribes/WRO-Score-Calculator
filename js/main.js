@@ -4,7 +4,7 @@ function updateLang () {
   if (document.getElementById('lang').value !== '') {
     newUrl += '/'
   }
-  newUrl += document.getElementById('lang').value + window.location.pathname.replace(/WRO-Score-Calculator(\/(nl))*/g, '')
+  newUrl += document.getElementById('lang').value + window.location.pathname.replace(/WRO-Score-Calculator(\/(nl))*/, '')
     .replace(/\/{2,}/g, '/')
   window.location.href = newUrl
 }
