@@ -138,6 +138,29 @@ input[type=button]:hover {
     background-color: #ed5542;
 }
 
+select {
+    padding: 0.25rem 1rem 0.25rem 0.25rem;
+    font-size: 1rem;
+    border: 2px solid #6d6d6d;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(https://the947thtokay.github.io/WRO-Score-Calculator/assets/arrow-down.png) right / 1rem no-repeat #e6e6e6;
+}
+
+/* Make select styles work for IE */
+select::-ms-expand {
+    display: none;
+}
+
+/* Targets IE 9 */
+@media screen and (min-width:0\0) {
+    select {
+        background:none\9;
+        padding: 5px\9;
+    }
+}
+
 .menu-button {
     display: inline-block;
     margin: auto;
