@@ -145,7 +145,7 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url(https://the947thtokay.github.io/WRO-Score-Calculator/assets/arrow-down.png) right / 1rem no-repeat #e6e6e6;
+    background: url(../assets/arrow-down.png) right / 1rem no-repeat #e6e6e6;
 }
 
 /* Make select styles work for IE */
