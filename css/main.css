@@ -53,8 +53,9 @@ footer {
     width: 100%;
     height: 3.5rem;
 }
-h1, h2, h3, h4, h5, h6, p, a, label, td, th, input {
+h1, h2, h3, h4, h5, h6, p, a, label, td, th, input, li {
     font-family: "Roboto Slab", serif;
+    font-size: 1rem;
 }
 
 h1 {
@@ -229,4 +230,17 @@ a.menu-button {
         position: relative;
         clear: both;
     }
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul li {
+    padding-left: 1rem;
+    background: url("../assets/arrow-right.png") left / 1rem no-repeat;
+}
+
+em {
+    font-style: italic;
 }
