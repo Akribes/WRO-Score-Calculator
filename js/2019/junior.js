@@ -54,12 +54,12 @@ function update () {
 
   // Old lamps
   scores[6] = Number(document.getElementById('npc-b1').value)
-  if (scores[6] !== 0) {
+  if (scores[6] === 10) {
     scores[6] += Number(document.getElementById('s-b1').value)
   }
 
   scores[7] = Number(document.getElementById('npc-b2').value)
-  if (scores[7] !== 0) {
+  if (scores[7] === 10) {
     scores[7] += Number(document.getElementById('s-b2').value)
   }
 
