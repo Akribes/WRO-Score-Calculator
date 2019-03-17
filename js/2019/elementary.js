@@ -5,6 +5,7 @@ function update () {
   scores = [0,0,0,0,0,0,0,0,0]
 
   // Red, yellow, green and white passengers
+  document.getElementById('hide1').style.visibility = 'visible'
   if (document.getElementById('npc1').value === 'p') {
     if (document.getElementById('dest1').value === 'r') {
       scores[0] = 5
@@ -20,8 +21,11 @@ function update () {
     if (scores[0] === 20) {
       scores[0] = 25
     }
+  } else {
+    document.getElementById('hide1').style.visibility = 'hidden'
   }
 
+  document.getElementById('hide2').style.visibility = 'visible'
   if (document.getElementById('npc2').value === 'p') {
     if (document.getElementById('dest2').value === 'r') {
       scores[1] = 5
@@ -37,8 +41,11 @@ function update () {
     if (scores[1] === 20) {
       scores[1] = 25
     }
+  } else {
+    document.getElementById('hide2').style.visibility = 'hidden'
   }
 
+  document.getElementById('hide3').style.visibility = 'visible'
   if (document.getElementById('npc3').value === 'p') {
     if (document.getElementById('dest3').value === 'r') {
       scores[2] = 5
@@ -54,8 +61,11 @@ function update () {
     if (scores[2] === 20) {
       scores[2] = 25
     }
+  } else {
+    document.getElementById('hide3').style.visibility = 'hidden'
   }
 
+  document.getElementById('hide4').style.visibility = 'visible'
   if (document.getElementById('npc4').value === 'p') {
     if (document.getElementById('dest4').value === 'r') {
       scores[3] = 5
@@ -71,8 +81,11 @@ function update () {
     if (scores[3] === 20) {
       scores[3] = 25
     }
+  } else {
+    document.getElementById('hide4').style.visibility = 'hidden'
   }
 
+  document.getElementById('hide5').style.visibility = 'visible'
   if (document.getElementById('npc5').value === 'p') {
     if (document.getElementById('dest5').value === 'r') {
       scores[4] = 5
@@ -88,6 +101,8 @@ function update () {
     if (scores[4] === 20) {
       scores[4] = 25
     }
+  } else {
+    document.getElementById('hide5').style.visibility = 'hidden'
   }
 
   // Calculate score for passengers

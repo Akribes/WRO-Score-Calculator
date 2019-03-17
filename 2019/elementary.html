@@ -1,273 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="../css/main.css">
-    <script src="../js/main.js"></script>
-    <script src="../js/2019/elementary.js"></script>
-    <title>WRO Score Calculator</title>
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="stylesheet" href="../css/main.css">
+	<script src="../js/main.js"></script>
+	<script src="../js/2019/elementary.js"></script>
+	<title>WRO Score Calculator</title>
 </head>
 <body>
 <div class="container">
-    <header>
-        <h1>WRO Score Calculator</h1>
-        <p>A tool that calculates your WRO score</p>
-    </header>
-    <section>
-        <h2>Elementary age group, season 2019</h2>
-        <p>
-            Fill in the table below. Your score will appear at the bottom of the table.
-        </p>
-        <p>
-            You can also go back to the <a href="../index.html">home page</a> to select another age group or season.
-        </p>
-    </section>
-    <noscript>
-        <section>
-            <h2>Oh no, you have disabled JavaScript!</h2>
-            <p>
-                This tool uses JavaScript to calculate your score. Please enable it in order to use this tool!
-                <a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/auto" target="_blank">Here's a guide.</a>
-            </p>
-        </section>
-    </noscript>
-    <section>
-        <form id="scoreForm">
-            <table>
-                <thead>
-                <tr>
-                    <th>Mission</th>
-                    <th>Your score</th>
-                    <th>Highest possible score</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>
-                        <label>
-                            Red, green yellow or white passenger 1 is
-                            <select class="input" id="npc1">
-                                <option value="n">not</option>
-                                <option value="p">partly</option>
-                                <option value="c">completely</option>
-                            </select>
+	<header>
+		<h1>WRO Score Calculator</h1>
+		<p>A tool that calculates your WRO score</p>
+	</header>
+	<section>
+		<h2>Elementary age group, season 2019</h2>
+		<p>
+			Fill in the table below. Your score will appear at the bottom of the table.
+		</p>
+		<p>
+			You can also go back to the <a href="../index.html">home page</a> to select another age group or season.
+		</p>
+	</section>
+	<noscript>
+		<section>
+			<h2>Oh no, you have disabled JavaScript!</h2>
+			<p>
+				This tool uses JavaScript to calculate your score. Please enable it in order to use this tool!
+				<a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/auto" target="_blank">Here's a guide.</a>
+			</p>
+		</section>
+	</noscript>
+	<section>
+		<form id="scoreForm">
+			<table>
+				<thead>
+				<tr>
+					<th>Mission</th>
+					<th>Your score</th>
+					<th>Highest possible score</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>
+						<label>
+							Red, green yellow or white passenger 1 is
+							<select class="input" id="npc1">
+								<option value="n">not in another destination.</option>
+								<option value="p">partly</option>
+								<option value="c">completely</option>
+							</select>
+						</label><span id="hide1"><label>
+							at the
+							<select class="input" id="dest1">
+								<option value="w">wrong</option>
+								<option value="r">right</option>
+							</select>
+							destination
+						</label><label>
+							and is
+							<select class="input" id="s1">
+								<option value="n">not standing</option>
+								<option value="s">standing</option>
+							</select>.
+					</label></span>
+					</td>
+					<td id="result-1"></td>
+					<td>25</td>
+				</tr>
+				<tr>
+					<td>
+						<label>
+							Red, green yellow or white passenger 2 is
+							<select class="input" id="npc2">
+								<option value="n">not in another destination.</option>
+								<option value="p">partly</option>
+								<option value="c">completely</option>
+							</select>
+						</label><span id="hide2"><label>
+							at the
+							<select class="input" id="dest2">
+								<option value="w">wrong</option>
+								<option value="r">right</option>
+							</select>
+							destination
                         </label><label>
-                            at the
-                            <select class="input" id="dest1">
-                                <option value="w">wrong</option>
-                                <option value="r">right</option>
-                            </select>
-                            destination
-                        </label><label>
-                            and is
-                            <select class="input" id="s1">
-                                <option value="n">not standing</option>
-                                <option value="s">standing</option>
-                            </select>.
-                        </label>
-                    </td>
-                    <td id="result-1"></td>
-                    <td>25</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            Red, green yellow or white passenger 2 is
-                            <select class="input" id="npc2">
-                                <option value="n">not</option>
-                                <option value="p">partly</option>
-                                <option value="c">completely</option>
-                            </select>
-                        </label><label>
-                            at the
-                            <select class="input" id="dest2">
-                                <option value="w">wrong</option>
-                                <option value="r">right</option>
-                            </select>
-                            destination
-                        </label><label>
-                            and is
-                            <select class="input" id="s2">
-                                <option value="n">not standing</option>
-                                <option value="s">standing</option>
-                            </select>.
-                        </label>
-                    </td>
-                    <td id="result-2"></td>
-                    <td>25</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            Red, green yellow or white passenger 3 is
-                            <select class="input" id="npc3">
-                                <option value="n">not</option>
-                                <option value="p">partly</option>
-                                <option value="c">completely</option>
-                            </select>
-                        </label><label>
-                            at the
-                            <select class="input" id="dest3">
-                                <option value="w">wrong</option>
-                                <option value="r">right</option>
-                            </select>
-                            destination
-                        </label><label>
-                            and is
-                            <select class="input" id="s3">
-                                <option value="n">not standing</option>
-                                <option value="s">standing</option>
-                            </select>.
-                        </label>
-                    </td>
-                    <td id="result-3"></td>
-                    <td>25</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            Red, green yellow or white passenger 4 is
-                            <select class="input" id="npc4">
-                                <option value="n">not</option>
-                                <option value="p">partly</option>
-                                <option value="c">completely</option>
-                            </select>
-                        </label><label>
-                            at the
-                            <select class="input" id="dest4">
-                                <option value="w">wrong</option>
-                                <option value="r">right</option>
-                            </select>
-                            destination
-                        </label><label>
-                            and is
-                            <select class="input" id="s4">
-                                <option value="n">not standing</option>
-                                <option value="s">standing</option>
-                            </select>.
-                        </label>
-                    </td>
-                    <td id="result-4"></td>
-                    <td>25</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            Red, green yellow or white passenger 5 is
-                            <select class="input" id="npc5">
-                                <option value="n">not</option>
-                                <option value="p">partly</option>
-                                <option value="c">completely</option>
-                            </select>
-                        </label><label>
-                            at the
-                            <select class="input" id="dest5">
-                                <option value="w">wrong</option>
-                                <option value="r">right</option>
-                            </select>
-                            destination
-                        </label><label>
-                            and is
-                            <select class="input" id="s5">
-                                <option value="n">not standing</option>
-                                <option value="s">standing</option>
-                            </select>.
-                        </label>
-                    </td>
-                    <td id="result-5"></td>
-                    <td>25</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            The blue passenger
-                            <select class="input" id="o-b">
-                                <option value="0">is not</option>
-                                <option value="15">is</option>
-                            </select>
-                            still standing in its original position.
-                        </label>
-                    </td>
-                    <td id="result-b"></td>
-                    <td>15</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            The best positioned battery is
-                            <select class="input" id="npc-bat">
-                                <option value="0">not</option>
-                                <option value="5">partly</option>
-                                <option value="15">completely</option>
-                            </select>
-                            inside the battery area.
-                        </label>
-                    </td>
-                    <td id="result-battery"></td>
-                    <td>15</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            The robot has moved or damaged
-                            <select class="input" id="walls">
-                                <option value="0">0</option>
-                                <option value="-5">1</option>
-                                <option value="-10">2</option>
-                            </select>
-                            wall(s).
-                        </label>
-                    </td>
-                    <td id="result-walls"></td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            The robot
-                            <select class="input" id="end">
-                                <option value="0">has not</option>
-                                <option value="10">has</option>
-                            </select>
-                            ended completely inside the start/finish area.
-                        </label>
-                    </td>
-                    <td id="result-end"></td>
-                    <td>10</td>
-                </tr>
-                </tbody>
-                <tfoot>
-                <tr>
-                    <td>Total</td>
-                    <td id="result"></td>
-                    <td>165</td>
-                </tr>
-                </tfoot>
-            </table>
-            <br>
-            <input id="resetButton" type="button" value="Reset" onclick="resetForm()">
-        </form>
-    </section>
-    <section>
-        <h2>Some additional notes</h2>
-        <ul>
-            <li><em>Wrong destinations</em> do not include the initial area of a passenger, the battery area, and the start/finish area.</li>
-            <li>All passengers can be either an adult or a child. This doesn't influence the score.</li>
-        </ul>
-    </section>
-    <footer>
-        <div id="lang-container">
-            <label>
-                <select id="lang" onchange="updateLang()" autocomplete="off">
-                    <option value="" selected>English</option>
-                    <option value="nl">Nederlands</option>
-                </select>
-            </label>
-        </div>
-        <p>Copyright &copy; 2019 Mart Koster. <a href="https://github.com/The947thTokay/WRO-Score-Calculator/blob/master/LICENSE" target="_blank"> Licenced under the MIT Licence.</a></p>
-        <a id="github" href="https://github.com/The947thTokay/WRO-Score-Calculator/" target="_blank"><img src="../assets/GitHub-Mark-Light-64px.png" alt="GitHub"></a>
-    </footer>
+							and is
+							<select class="input" id="s2">
+								<option value="n">not standing</option>
+								<option value="s">standing</option>
+							</select>.
+                        </label></span>
+					</td>
+					<td id="result-2"></td>
+					<td>25</td>
+				</tr>
+				<tr>
+					<td>
+						<label>
+							Red, green yellow or white passenger 3 is
+							<select class="input" id="npc3">
+								<option value="n">not in another destination.</option>
+								<option value="p">partly</option>
+								<option value="c">completely</option>
+							</select>
+						</label><span id="hide3"><label>
+							at the
+							<select class="input" id="dest3">
+								<option value="w">wrong</option>
+								<option value="r">right</option>
+							</select>
+							destination
+						</label><label>
+							and is
+							<select class="input" id="s3">
+								<option value="n">not standing</option>
+								<option value="s">standing</option>
+							</select>.
+						</label></span>
+					</td>
+					<td id="result-3"></td>
+					<td>25</td>
+				</tr>
+				<tr>
+					<td>
+						<label>
+							Red, green yellow or white passenger 4 is
+							<select class="input" id="npc4">
+								<option value="n">not in another destination.</option>
+								<option value="p">partly</option>
+								<option value="c">completely</option>
+							</select>
+						</label><span id="hide4"><label>
+							at the
+							<select class="input" id="dest4">
+								<option value="w">wrong</option>
+								<option value="r">right</option>
+							</select>
+							destination
+						</label><label>
+							and is
+							<select class="input" id="s4">
+								<option value="n">not standing</option>
+								<option value="s">standing</option>
+							</select>.
+						</label></span>
+					</td>
+					<td id="result-4"></td>
+					<td>25</td>
+				</tr>
+				<tr>
+					<td>
+						<label>
+							Red, green yellow or white passenger 5 is
+							<select class="input" id="npc5">
+								<option value="n">not in another destination.</option>
+								<option value="p">partly</option>
+								<option value="c">completely</option>
+							</select>
+						</label><span id="hide5"><label>
+							at the
+							<select class="input" id="dest5">
+								<option value="w">wrong</option>
+								<option value="r">right</option>
+							</select>
+							destination
+						</label><label>
+							and is
+							<select class="input" id="s5">
+								<option value="n">not standing</option>
+								<option value="s">standing</option>
+							</select>.
+						</label></span>
+					</td>
+					<td id="result-5"></td>
+					<td>25</td>
+				</tr>
+				<tr>
+					<td>
+						<label>
+							The blue passenger
+							<select class="input" id="o-b">
+								<option value="0">is not</option>
+								<option value="15">is</option>
+							</select>
+							still standing in its original position.
+						</label>
+					</td>
+					<td id="result-b"></td>
+					<td>15</td>
+				</tr>
+				<tr>
+					<td>
+						<label>
+							The best positioned battery is
+							<select class="input" id="npc-bat">
+								<option value="0">not</option>
+								<option value="5">partly</option>
+								<option value="15">completely</option>
+							</select>
+							inside the battery area.
+						</label>
+					</td>
+					<td id="result-battery"></td>
+					<td>15</td>
+				</tr>
+				<tr>
+					<td>
+						<label>
+							The robot has moved or damaged
+							<select class="input" id="walls">
+								<option value="0">0</option>
+								<option value="-5">1</option>
+								<option value="-10">2</option>
+							</select>
+							wall(s).
+						</label>
+					</td>
+					<td id="result-walls"></td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>
+						<label>
+							The robot
+							<select class="input" id="end">
+								<option value="0">has not</option>
+								<option value="10">has</option>
+							</select>
+							ended completely inside the start/finish area.
+						</label>
+					</td>
+					<td id="result-end"></td>
+					<td>10</td>
+				</tr>
+				</tbody>
+				<tfoot>
+				<tr>
+					<td>Total</td>
+					<td id="result"></td>
+					<td>165</td>
+				</tr>
+				</tfoot>
+			</table>
+			<br>
+			<input id="resetButton" type="button" value="Reset" onclick="resetForm()">
+		</form>
+	</section>
+	<section>
+		<h2>Some additional notes</h2>
+		<ul>
+			<li><em>Wrong destinations</em> do not include the initial area of a passenger, the battery area, and the start/finish area.</li>
+			<li>All passengers can be either an adult or a child. This doesn't influence the score.</li>
+		</ul>
+	</section>
+	<footer>
+		<div id="lang-container">
+			<label>
+				<select id="lang" onchange="updateLang()" autocomplete="off">
+					<option value="" selected>English</option>
+					<option value="nl">Nederlands</option>
+				</select>
+			</label>
+		</div>
+		<p>Copyright &copy; 2019 Mart Koster. <a href="https://github.com/The947thTokay/WRO-Score-Calculator/blob/master/LICENSE" target="_blank"> Licenced under the MIT Licence.</a></p>
+		<a id="github" href="https://github.com/The947thTokay/WRO-Score-Calculator/" target="_blank"><img src="../assets/GitHub-Mark-Light-64px.png" alt="GitHub"></a>
+	</footer>
 </div>
 </body>
 </html>
