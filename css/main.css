@@ -39,6 +39,7 @@ header {
 }
 section {
     background-color: #e6e6e6;
+    overflow-x: scroll;
     margin-left: 2em;
     margin-right: 2em;
     margin-top: 2em;
