@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+	<script src="{{ site.baseurl }}/assets/js/main.js"></script>
+    <title>WRO Score Calculator</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>WRO Score Calculator</h1>
+        <p>A tool that calculates your WRO score</p>
+    </header>
+    <noscript>
+        <section>
+            <h2>Oh no, you have disabled JavaScript!</h2>
+            <p>
+                This tool uses JavaScript to calculate your score. Please enable it in order to use this tool!
+                <a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/auto" target="_blank">Here's a guide.</a>
+            </p>
+        </section>
+    </noscript>
+{{ content }}
+    <footer>
+        <p>Copyright &copy; 2019 Mart Koster. <a href="https://github.com/Akribes/WRO-Score-Calculator/blob/master/LICENSE" target="_blank">Licensed under the MIT License.</a></p>
+		<a id="github" href="https://github.com/The947thTokay/WRO-Score-Calculator/" target="_blank"><img src="{{ site.baseurl }}/assets/GitHub-Mark-Light-64px.png" alt="GitHub"></a>
+    </footer>
+</div>
+</body>
+</html>
