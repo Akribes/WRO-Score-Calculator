@@ -1,0 +1,193 @@
+---
+layout: scoreform
+---
+<script src="{{ site.baseurl }}/assets/js/2020/elementary.js"></script>
+<section>
+	<h2>Elementary age group, season 2020</h2>
+	<p>Fill in the table below. Your score will appear at the bottom of the table.</p>
+	<p>You can also go back to the <a href="{{ site.baseurl }}/">home page</a> to select another age group or season.</p>
+</section>
+<section>
+	<form id="scoreForm">
+		<table>
+			<thead>
+			<tr>
+				<th>Mission</th>
+				<th>Your score</th>
+				<th>Highest possible score</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>
+					<label>
+						The fallen tree
+						<select class="input" id="tree">
+							<option value="0">is</option>
+							<option value="11">is not</option>
+						</select>
+						touching black lines.
+					</label>
+				</td>
+				<td id="result-tree"></td>
+				<td>11</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						Supply 1 is
+						<select class="input" id="npc1">
+							<option value="n">not in a target area.</option>
+							<option value="p">partly</option>
+							<option value="c">completely</option>
+						</select>
+					</label><span id="hide1"><label>
+						in a
+						<select class="input" id="target1">
+							<option value="w">wrong</option>
+							<option value="c">correct</option>
+						</select>
+						target area.
+					</span></label>
+				</td>
+				<td id="result-1"></td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						Supply 2 is
+						<select class="input" id="npc2">
+							<option value="n">not in a target area.</option>
+							<option value="p">partly</option>
+							<option value="c">completely</option>
+						</select>
+					</label><span id="hide2"><label>
+						in a
+						<select class="input" id="target2">
+							<option value="w">wrong</option>
+							<option value="c">correct</option>
+						</select>
+						target area.
+					</span></label>
+				</td>
+				<td id="result-2"></td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						Supply 3 is
+						<select class="input" id="npc3">
+							<option value="n">not in a target area.</option>
+							<option value="p">partly</option>
+							<option value="c">completely</option>
+						</select>
+					</label><span id="hide3"><label>
+						in a
+						<select class="input" id="target3">
+							<option value="w">wrong</option>
+							<option value="c">correct</option>
+						</select>
+						target area.
+					</span></label>
+				</td>
+				<td id="result-3"></td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						Electric cable 1 has
+						<select class="input" id="we1">
+							<option value="0">no</option>
+							<option value="8">1</option>
+							<option value="14">2</option>
+						</select>
+						white end(s) touching the target area.
+					</label>
+				</td>
+				<td id="result-c1"></td>
+				<td>14</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						Electric cable 2 has
+						<select class="input" id="we2">
+							<option value="0">no</option>
+							<option value="8">1</option>
+							<option value="14">2</option>
+						</select>
+						white end(s) touching the target area.
+					</label>
+				</td>
+				<td id="result-c2"></td>
+				<td>14</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						The robot
+						<select class="input" id="generator">
+							<option value="14">has not</option>
+							<option value="0">has</option>
+						</select>
+						moved or damaged the old power generator.
+					</label>
+				</td>
+				<td id="result-generator"></td>
+				<td>14</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						The robot has moved or damaged
+						<select class="input" id="trees">
+							<option value="0">no</option>
+							<option value="-4">1</option>
+							<option value="-8">2</option>
+							<option value="-12">3</option>
+							<option value="-16">4</option>
+						</select>
+						tree(s).
+					</label>
+				</td>
+				<td id="result-trees"></td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						The robot
+						<select class="input" id="end">
+							<option value="n">has not</option>
+							<option value="y">has</option>
+						</select>
+						ended completely inside any start/finish area.
+					</label>
+				</td>
+				<td id="result-end"></td>
+				<td>11</td>
+			</tr>
+			</tbody>
+			<tfoot>
+			<tr>
+				<td>Total</td>
+				<td id="result"></td>
+				<td>100</td>
+			</tr>
+			</tfoot>
+		</table>
+		<br>
+		<input id="resetButton" type="button" value="Reset" onclick="resetForm()">
+	</form>
+</section>
+<section>
+	<h2>Some additional notes</h2>
+	<ul>
+		<li>Only one supply counts per target area.</li>
+		<li>You will get penalties for trees if they touch the outside of the grey square, whreas the old power generator only needs to touch the starting position to get bonus points.</li>
+		<li>You will only get points for ending in the start/finish area if points, apart from the bonus points, are assigned.</li>
+	</ul>
+</section>
