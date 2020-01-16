@@ -1,0 +1,254 @@
+---
+layout: scoreform
+---
+<script src="{{ site.baseurl }}/assets/js/2020/junior.js"></script>
+<section>
+	<h2>Junior age group, season 2020</h2>
+	<p>Fill in the table below. Your score will appear at the bottom of the table.</p>
+	<p>You can also go back to the <a href="{{ site.baseurl }}/">home page</a> to select another age group or season.</p>
+</section>
+<section>
+	<form id="scoreForm">
+		<table>
+			<thead>
+			<tr>
+				<th>Mission</th>
+				<th>Your score</th>
+				<th>Highest possible score</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>
+					<label>
+						<select class="input" id="snow">
+							<option value="0">No</option>
+							<option value="3">1</option>
+							<option value="6">2</option>
+							<option value="9">3</option>
+							<option value="12">4</option>
+							<option value="15">5</option>
+							<option value="18">6</option>
+							<option value="21">7</option>
+							<option value="24">8</option>
+							<option value="27">9</option>
+							<option value="30">10</option>
+							<option value="33">11</option>
+							<option value="36">12</option>
+						</select>
+						snow element(s) is/are in the depot area, but not in the elevated depot, and
+					</label><label>
+						<select class="input" id="snow-elevated">
+							<option value="0">no</option>
+							<option value="5">1</option>
+							<option value="10">2</option>
+							<option value="15">3</option>
+							<option value="20">4</option>
+							<option value="25">5</option>
+							<option value="30">6</option>
+							<option value="35">7</option>
+							<option value="40">8</option>
+							<option value="45">9</option>
+							<option value="50">10</option>
+							<option value="55">11</option>
+							<option value="60">12</option>
+						</select>
+						snow element(s) is/are in the red area, inside the snow depot.
+					</label><label>
+						The depot is
+						<select class="input" id="depot-damaged">
+							<option value="2">not damaged</option>
+							<option value="0">damaged</option>
+						</select>.
+					</label>
+				</td>
+				<td id="result-snow"></td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						<select class="input" id="sections10-1">
+							<option value="0">No</option>
+							<option value="9">1</option>
+							<option value="18">2</option>
+							<option value="27">3</option>
+						</select>
+						1-0 street section(s) contact(s) black abrasive material.
+					</label>
+				</td>
+				<td id="result-ab1"></td>
+				<td>27</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						<select class="input" id="sections10-2">
+							<option value="0">No</option>
+							<option value="4">1</option>
+							<option value="8">2</option>
+							<option value="12">3</option>
+						</select>
+						1-0 street section(s) contact(s) <em>only</em> blue abrasive material.
+					</label>
+				</td>
+				<td id="result-ab2"></td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						<select class="input" id="sections01-1">
+							<option value="0">No</option>
+							<option value="9">1</option>
+							<option value="18">2</option>
+							<option value="27">3</option>
+						</select>
+						0-1 street section(s) contact(s) blue abrasive material.
+					</label>
+				</td>
+				<td id="result-ab3"></td>
+				<td>27</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						<select class="input" id="sections01-2">
+							<option value="0">No</option>
+							<option value="4">1</option>
+							<option value="8">2</option>
+							<option value="12">3</option>
+						</select>
+						0-1 street section(s) contact(s) <em>only</em> black abrasive material.
+					</label>
+				</td>
+				<td id="result-ab4"></td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						The vehicle on 0-0 street 1 is
+						<select class="input" id="vehicle00-1">
+							<option value="0">not</option>
+							<option value="15">partly</option>
+							<option value="20">completely</option>
+						</select>
+						inside the parking area.
+					</label>
+				</td>
+				<td id="result-v1"></td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						The vehicle on 0-0 street 2 is
+						<select class="input" id="vehicle00-2">
+							<option value="0">not</option>
+							<option value="15">partly</option>
+							<option value="20">completely</option>
+						</select>
+						inside the parking area.
+					</label>
+				</td>
+				<td id="result-v2"></td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						<select class="input" id="vehicles">
+							<option value="0">No</option>
+							<option value="6">1</option>
+							<option value="12" selected>2</option>
+						</select>
+						vehicles(s) on the 0-1 and 1-0 street have not been moved or damaged.
+					</label>
+				</td>
+				<td id="result-vehicles"></td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						<select class="input" id="dispensers">
+							<option value="0">No</option>
+							<option value="4">1</option>
+							<option value="8" selected>2</option>
+						</select>
+						dispenser(s) have not been moved or damaged.
+					</label>
+				</td>
+				<td id="result-dispensers"></td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						<select class="input" id="borders">
+							<option value="0">No</option>
+							<option value="2">1</option>
+							<option value="4">2</option>
+							<option value="6">3</option>
+							<option value="8">4</option>
+							<option value="10">5</option>
+							<option value="12" selected>6</option>
+						</select>
+						border(s) have not been moved or damaged.
+					</label>
+				</td>
+				<td id="result-borders"></td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						The robot has moved or damaged
+						<select class="input" id="trees">
+							<option value="0">no</option>
+							<option value="-8">1</option>
+							<option value="-16">2</option>
+							<option value="-24">3</option>
+						</select>
+						tree(s).
+					</label>
+				</td>
+				<td id="result-trees"></td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						The robot
+						<select class="input" id="end">
+							<option value="n">has not</option>
+							<option value="y">has</option>
+						</select>
+						ended completely inside any start/finish area.
+					</label>
+				</td>
+				<td id="result-end"></td>
+				<td>11</td>
+			</tr>
+			</tbody>
+			<tfoot>
+			<tr>
+				<td>Total</td>
+				<td id="result"></td>
+				<td>200</td>
+			</tr>
+			</tfoot>
+		</table>
+		<br>
+		<input id="resetButton" type="button" value="Reset" onclick="resetForm()">
+	</form>
+</section>
+<section>
+	<h2>Some additional notes</h2>
+	<ul>
+		<li>Abrasive material elements only count for one street section each.</li>
+		<li>Borders, dispensers and trees are moved if they contanct the outside of the grey squares they are in. Vehicles are moved if they don't contact the frame of initial position anymore.</li>
+		<li>You will only get points for ending in the start/finish area if points, apart from the bonus points, are assigned.</li>
+	</ul>
+</section>
