@@ -241,7 +241,7 @@ ol {
 
 ul li {
     padding-left: 1rem;
-    background: url("{{ site.baseurl }}/assets/arrow-right.png") left / 1rem no-repeat;
+    background: url("{{ site.baseurl }}/assets/arrow-right.png") 0 0.2rem / 1rem no-repeat;
 }
 
 em {
