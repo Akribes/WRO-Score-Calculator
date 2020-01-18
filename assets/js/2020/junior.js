@@ -17,19 +17,21 @@ function update () {
 
   // Abrasive material
   scores[1] = get('sections10-1').value
-  let blackLeft = 3 - get('sections10-1').selectedIndex
-  get('sections01-2').selectedIndex = Math.min(get('sections01-2').selectedIndex, blackLeft)
+  let blackLeft = 4 - get('sections10-1').selectedIndex
+  let sections01Left = 3 - get('sections01-1').selectedIndex
+  get('sections01-2').selectedIndex = Math.min(get('sections01-2').selectedIndex, sections01Left, blackLeft)
   for (i = 0; i <= 3; i++) {
-    if (i > blackLeft) get('sections01-2').options[i].disabled = true
+    if (i > blackLeft || i > sections01Left) get('sections01-2').options[i].disabled = true
     else get('sections01-2').options[i].disabled = false
   }
   scores[4] = get('sections01-2').value
   
   scores[3] = get('sections01-1').value
-  let blueLeft = 3 - get('sections01-1').selectedIndex
-  get('sections10-2').selectedIndex = Math.min(get('sections10-2').selectedIndex, blueLeft)
+  let blueLeft = 4 - get('sections01-1').selectedIndex
+  let sections10Left = 3 - get('sections10-1').selectedIndex
+  get('sections10-2').selectedIndex = Math.min(get('sections10-2').selectedIndex, sections10Left, blueLeft)
   for (i = 0; i <= 3; i++) {
-    if (i > blueLeft) get('sections10-2').options[i].disabled = true
+    if (i > blueLeft || i > sections10Left) get('sections10-2').options[i].disabled = true
     else get('sections10-2').options[i].disabled = false
   }
   scores[2] = get('sections10-2').value
