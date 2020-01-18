@@ -146,14 +146,22 @@ input[type=button]:hover {
     background-color: #ed5542;
 }
 
-select {
+select, input[type=number]{
     padding: 0.125rem 1.125rem 0.125rem 0.125rem;
     font-size: 1rem;
     border: 2px solid #6d6d6d;
+}
+
+select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     background: url({{ site.baseurl }}/assets/arrow-down.png) right / 1rem no-repeat #e6e6e6;
+}
+
+input[type=number] {
+	padding-right: 0.125rem;
+	width: 2.7em;
 }
 
 /* Make select styles work for IE */
@@ -196,8 +204,10 @@ select::-ms-expand {
 }
 
 a.menu-button {
+	flex: 1 0 50%;
     color: #ffffff;
     text-decoration: none;
+	padding: 0.5em 0.5em
 }
 
 .menu-button:hover {
@@ -245,7 +255,7 @@ ol {
 
 ul li {
     padding-left: 1rem;
-    background: url("{{ site.baseurl }}/assets/arrow-right.png") 0 0.2rem / 1rem no-repeat;
+    background: url("{{ site.baseurl }}/assets/arrow-right.png") 0 50% / 1em no-repeat;
 }
 
 em {

@@ -1,0 +1,215 @@
+---
+layout: scoreform
+---
+<script src="{{ site.baseurl }}/assets/js/2020/wedo.js"></script>
+<section>
+	<h2>WeDo age group, season 2020</h2>
+	<p>Fill in the table below. Your score will appear at the bottom of the table.</p>
+	<p>You can also go back to the <a href="{{ site.baseurl }}/">home page</a> to select another age group or season.</p>
+</section>
+<section>
+	<form id="scoreForm">
+		<table>
+			<thead>
+			<tr>
+				<th>Mission</th>
+				<th>Your score</th>
+				<th>Highest possible score</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>
+					<label>
+						Person 1 is in
+						<select class="input" id="p1">
+							<option value="0">its Danger Area</option>
+							<option value="10">a Safe Area</option>
+							<option value="8">a Replant Area</option>
+							<option value="5">none of these areas</option>
+						</select>.
+					</label>
+				</td>
+				<td id="result-p1"></td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						Person 2 is in
+						<select class="input" id="p2">
+							<option value="0">its Danger Area</option>
+							<option value="10">a Safe Area</option>
+							<option value="8">a Replant Area</option>
+							<option value="5">none of these areas</option>
+						</select>.
+					</label>
+				</td>
+				<td id="result-p2"></td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						Person 3 is in
+						<select class="input" id="p3">
+							<option value="0">its Danger Area</option>
+							<option value="10">a Safe Area</option>
+							<option value="8">a Replant Area</option>
+							<option value="5">none of these areas</option>
+						</select>.
+					</label>
+				</td>
+				<td id="result-p3"></td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						Person 4 is in
+						<select class="input" id="p4">
+							<option value="0">its Danger Area</option>
+							<option value="10">a Safe Area</option>
+							<option value="8">a Replant Area</option>
+							<option value="5">none of these areas</option>
+						</select>.
+					</label>
+				</td>
+				<td id="result-p4"></td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						There is/are
+						<select class="input" id="water">
+							<option value="0">no</option>
+							<option value="5">1</option>
+							<option value="15">2</option>
+							<option value="30">3</option>
+							<option value="50">4</option>
+						</select>
+						Extinguish Fire Areas with at least one water bucket completely inside it.
+					</label>
+				</td>
+				<td id="result-water"></td>
+				<td>50</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						The robot
+						<select class="input" id="sound">
+							<option value="0">has not</option>
+							<option value="10">has</option>
+						</select>
+						sounded a bubbling water sound and shown a picture of fire on the controlling device.
+					</label>
+				</td>
+				<td id="result-sound"></td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						Young tree 1 is in
+						<select class="input" id="t1">
+							<option value="0">in a Safe Area</option>
+							<option value="10">a Replant Area</option>
+							<option value="5">none of these areas</option>
+						</select>.
+					</label>
+				</td>
+				<td id="result-t1"></td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						Young tree 2 is in
+						<select class="input" id="t2">
+							<option value="0">in a Safe Area</option>
+							<option value="10">a Replant Area</option>
+							<option value="5">none of these areas</option>
+						</select>.
+					</label>
+				</td>
+				<td id="result-t2"></td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						Young tree 3 is in
+						<select class="input" id="t3">
+							<option value="0">in a Safe Area</option>
+							<option value="10">a Replant Area</option>
+							<option value="5">none of these areas</option>
+						</select>.
+					</label>
+				</td>
+				<td id="result-t3"></td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						Young tree 4 is in
+						<select class="input" id="t4">
+							<option value="0">in a Safe Area</option>
+							<option value="10">a Replant Area</option>
+							<option value="5">none of these areas</option>
+						</select>.
+					</label>
+				</td>
+				<td id="result-t4"></td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<td>
+					<label>
+						The robot
+						<select class="input" id="end">
+							<option value="0">has not</option>
+							<option value="10">has</option>
+						</select>
+						ended completely inside the Parking Area.
+					</label>
+				</td>
+				<td id="result-end"></td>
+				<td>10</td>
+			</tr>
+			<tr><td colspan="3"><strong>Penalties</strong></td></tr>
+			<tr>
+				<td>
+					<label>
+						The team illegally touched the robot or a game object
+						<input type="number" value="0" min="0" class="input" id="penalties">
+						time(s).
+					</label>
+				</td>
+				<td id="result-penalties"></td>
+				<td>0</td>
+			</tr>
+			</tbody>
+			<tfoot>
+			<tr>
+				<td>Total</td>
+				<td id="result"></td>
+				<td>150</td>
+			</tr>
+			</tfoot>
+		</table>
+		<br>
+		<input id="resetButton" type="button" value="Reset" onclick="resetForm()">
+		<input style="display: none">
+	</form>
+</section>
+<section>
+	<h2>Some additional notes</h2>
+	<ul>
+		<li>A game object is inside or outside of an area if it's completely inside or outside respectively.</li>
+		<li>You will only get points for ending in the Parking Area if other points are assigned.</li>
+		<li>You can't get a negative score.</li>
+	</ul>
+</section>
