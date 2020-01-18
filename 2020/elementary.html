@@ -129,6 +129,21 @@ layout: scoreform
 				<td>
 					<label>
 						The robot
+						<select class="input" id="end">
+							<option value="n">has not</option>
+							<option value="y">has</option>
+						</select>
+						ended completely inside any start/finish area.
+					</label>
+				</td>
+				<td id="result-end"></td>
+				<td>11</td>
+			</tr>
+			<tr><td colspan="3"><strong>Bonus points and penalties</strong></td></tr>
+			<tr>
+				<td>
+					<label>
+						The robot
 						<select class="input" id="generator">
 							<option value="14">has not</option>
 							<option value="0">has</option>
@@ -156,20 +171,6 @@ layout: scoreform
 				<td id="result-trees"></td>
 				<td>0</td>
 			</tr>
-			<tr>
-				<td>
-					<label>
-						The robot
-						<select class="input" id="end">
-							<option value="n">has not</option>
-							<option value="y">has</option>
-						</select>
-						ended completely inside any start/finish area.
-					</label>
-				</td>
-				<td id="result-end"></td>
-				<td>11</td>
-			</tr>
 			</tbody>
 			<tfoot>
 			<tr>
@@ -189,5 +190,6 @@ layout: scoreform
 		<li>Only one supply counts per target area.</li>
 		<li>You will get penalties for trees if they touch the outside of the grey square, whereas the old power generator only needs to touch the starting position to get bonus points.</li>
 		<li>You will only get points for ending in the start/finish area if points, apart from the bonus points, are assigned.</li>
+		<li>You can't get a negative score.</li>
 	</ul>
 </section>
