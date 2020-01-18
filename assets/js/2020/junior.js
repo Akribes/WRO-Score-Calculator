@@ -5,15 +5,15 @@ function update () {
   scores = [0,0,0,0,0,0,0,0,0,0,0,0]
 
   // Snow
-  scores[0] = parseInt(get('snow').value)
-  let depot = 12 - get('snow').selectedIndex
+  scores[0] = parseInt(get('snow-elevated').selectedIndex * (3 + parseInt(get('depot-damaged').value)))
+  let outsideDepot = 12 - get('snow-elevated').selectedIndex
   
-  get('snow-elevated').selectedIndex = Math.min(get('snow-elevated').selectedIndex, depot)
+  get('snow').selectedIndex = Math.min(get('snow').selectedIndex, outsideDepot)
   for (i = 0; i <= 12; i++) {
-    if (i > depot) get('snow-elevated').options[i].disabled = true
-    else get('snow-elevated').options[i].disabled = false
+    if (i > outsideDepot) get('snow').options[i].disabled = true
+    else get('snow').options[i].disabled = false
   }
-  scores[0] += get('snow-elevated').selectedIndex * (3 + parseInt(get('depot-damaged').value))
+  scores[0] += parseInt(get('snow').value)
 
   // Abrasive material
   scores[1] = get('sections10-1').value

@@ -2,7 +2,7 @@
 ---
 @import url("reset.css");
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap');
 
 html {
     height: 100%;
@@ -86,6 +86,10 @@ a {
 
 a:hover, a:visited {
     color: #353535;
+}
+
+strong {
+	font-weight: 700
 }
 
 #github {
